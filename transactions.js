@@ -38,6 +38,7 @@ signedTransaction.then((signedTx) => {
   const sentTx = web3.eth.sendSignedTransaction(
     signedTx.raw || signedTx.rawTransaction
   );
+  //done
 
   sentTx.on("receipt", (receipt) => {
     console.log("receipt: ", receipt);
